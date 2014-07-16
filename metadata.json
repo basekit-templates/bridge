@@ -19,47 +19,47 @@
 	"colorSwatches": {
 		"Swatch 1": {
 			"color1":"#ffffff",
-			"color2":"red",
-			"color3":"burgandy",
+			"color2":"#F00",
+			"color3":"#F00",
 			"color4":"#dddddd",
 			"color5":"#000000",
-			"color6":"red",
+			"color6":"#000000",
 			"color7":"#aaaaaa"
 		},
 		"Swatch 2": {
 			"color1":"#ffffff",
-			"color2":"blue",
-			"color3":"navy",
+			"color2":"#F00",
+			"color3":"#F00",
 			"color4":"#dddddd",
 			"color5":"#000000",
-			"color6":"red",
+			"color6":"#F00",
 			"color7":"#aaaaaa"
 		},
 		"Swatch 3": {
 			"color1":"#ffffff",
-			"color2":"green",
-			"color3":"teal",
+			"color2":"#F00",
+			"color3":"#F00",
 			"color4":"#dddddd",
 			"color5":"#000000",
-			"color6":"red",
+			"color6":"#F00",
 			"color7":"#aaaaaa"
 		},
 		"Swatch 4": {
 			"color1":"#ffffff",
-			"color2":"orange",
-			"color3":"red",
+			"color2":"#F00",
+			"color3":"#F00",
 			"color4":"#dddddd",
 			"color5":"#000000",
-			"color6":"red",
+			"color6":"#F00",
 			"color7":"#aaaaaa"
 		},
 		"Swatch 5": {
 			"color1":"#ffffff",
-			"color2":"yellow",
+			"color2":"#F00",
 			"color3":"orange",
 			"color4":"#dddddd",
 			"color5":"#000000",
-			"color6":"red",
+			"color6":"#F00",
 			"color7":"#aaaaaa"
 		}
 	},
