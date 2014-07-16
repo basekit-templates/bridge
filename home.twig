@@ -1,0 +1,18 @@
+<!-- Refers back to block code in layout.twig -->
+{% extends "layout.twig" %}
+{% block content %}
+
+<!-- Page type class hook -->
+<div class="home-page">
+	
+	<!-- Main container wrap, grid class -->
+	<div class="container">
+	
+		<!-- Zone widget area -->
+		{{zone('main')|raw}}
+		
+	</div>
+	
+</div>
+
+{% endblock %}
