@@ -1,0 +1,155 @@
+{
+	"name":"Bridge",
+	"thumbnail":"thumbnail.png",
+	"screenshot":"thumbnail.png",
+	"images":[
+		"images/feature.jpg",
+		"images/logo.jpg",
+		"images/icon-1.jpg",
+		"images/icon-2.jpg",
+		"images/icon-3.jpg"
+	],
+	"pageTypes":[
+		"home",
+		"default"
+	],
+	"tags": {
+		"en": ["construction", "textured", "business", "formal", "website", "industrial", "sectioned", "bold", "sans-serif"]
+	},
+	"colorSwatches": {
+		"Swatch 1": {
+			"color1":"#ffffff",
+			"color2":"red",
+			"color3":"burgandy",
+			"color4":"#dddddd",
+			"color5":"#000000",
+			"color6":"red",
+			"color7":"#aaaaaa"
+		},
+		"Swatch 2": {
+			"color1":"#ffffff",
+			"color2":"blue",
+			"color3":"navy",
+			"color4":"#dddddd",
+			"color5":"#000000",
+			"color6":"red",
+			"color7":"#aaaaaa"
+		},
+		"Swatch 3": {
+			"color1":"#ffffff",
+			"color2":"green",
+			"color3":"teal",
+			"color4":"#dddddd",
+			"color5":"#000000",
+			"color6":"red",
+			"color7":"#aaaaaa"
+		},
+		"Swatch 4": {
+			"color1":"#ffffff",
+			"color2":"orange",
+			"color3":"red",
+			"color4":"#dddddd",
+			"color5":"#000000",
+			"color6":"red",
+			"color7":"#aaaaaa"
+		},
+		"Swatch 5": {
+			"color1":"#ffffff",
+			"color2":"yellow",
+			"color3":"orange",
+			"color4":"#dddddd",
+			"color5":"#000000",
+			"color6":"red",
+			"color7":"#aaaaaa"
+		}
+	},
+	"fontSwatch": {
+	   "title": "Helvetica",
+		"font1": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "42px",
+			"font-weight": "400",
+			"line-height": "52px",
+			"color": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font2": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "24px",
+			"font-weight": "300",
+			"line-height": "34px",
+			"color": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font3": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "24px",
+			"font-weight": "400",
+			"line-height": "34px",
+			"color": "@color-swatch2",
+			"letter-spacing": "inherit"
+		},
+		"font4": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "15px",
+			"font-weight": "600",
+			"line-height": "25px",
+			"color": "@color-swatch4",
+			"letter-spacing": "inherit"
+		},
+		"font5": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "14px",
+			"font-weight": "400",
+			"line-height": "25px",
+			"color": "@color-swatch5",
+			"letter-spacing": "inherit"
+		},
+		"font6": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "14px",
+			"font-weight": "400",
+			"line-height": "25px",
+			"color": "@color-swatch6",
+			"letter-spacing": "inherit",
+			"color-hover": "lighten(@color-swatch6, 40%)",
+			"background-color": "@color-swatch2",
+			"background-color-hover": "@color-swatch2"
+		 },
+		"font7": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "14px",
+			"font-weight": "400",
+			"line-height": "25px",
+			"color": "@color-swatch6",
+			"letter-spacing": "inherit",
+			"color-hover": "@color-swatch6",
+			"background-color": "@color-swatch3",
+			"background-color-hover": "@color-swatch3"
+		},
+		"font8": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "32px",
+			"font-weight": "700",
+			"line-height": "42px",
+			"color": "@color-swatch1",
+			"letter-spacing": "inherit"
+		},
+		"font9": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "24px",
+			"font-weight": "400",
+			"line-height": "34px",
+			"color": "@color-swatch1",
+			"letter-spacing": "inherit"
+		},
+		"font10": {
+			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-size": "20px",
+			"font-weight": "700",
+			"line-height": "30px",
+			"color": "@color-swatch2",
+			"letter-spacing": "inherit"
+		}
+	}
+}
