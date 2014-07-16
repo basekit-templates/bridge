@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ page.seoLang }}">
+
+	<head>
+		<!-- Head metadata include -->
+		{% include "head.twig" %}
+		
+		<!-- Javascript include for BaseKit -->
+		{% include basekit.headScript %}
+	</head>
+
+	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+
+		<!-- Header include -->
+		{% include "header.twig" %}
+
+		<!-- Main content area (default.twig, home.twig) -->
+		<main class="main-content page-wrap">
+			{% block content %}
+			{% endblock %}
+		</main>
+
+		<!-- Footer include -->
+		{% include "footer.twig" %}
+
+		<!-- SVG support detection -->
+		<script type="text/javascript">
+			!function() {
+				function supportsSVG() {
+					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
+				}
+				if (supportsSVG()) document.documentElement.className += ' svg'
+			}()
+		</script>
+
+		<!-- Javascript include for BaseKit -->
+		{% include basekit.bodyScript %}
+
+</html>
