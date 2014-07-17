@@ -1,10 +1,20 @@
 <header class="header-wrap">
-	<div class="container">
+	<div class="header-sub">
+		<div class="container">
+			<div class="header-companyname">
+				{{widget('companyname', 'headercompanyname', {"business": "Bridge"})|raw}}
+			</div>
+			<div class="header-phonenumber">
+				{{widget('profile', 'phonenumber', { 'profileType': 'phone' })|raw}}
+			</div>
+		</div>
+	</div>
+	<div class="header-image">
+		{{widget('image', 'headerimage', { 'src': asset('images/header-image.jpg'), 'alt': 'header image', 'fileName': 'header-image.jpg'})|raw}}
+	</div>
+	<div class="header-main">
 		<div class="header-logo">
 			{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
-		</div>
-		<div class="header-companyname">
-			{{widget('companyname', 'headercompanyname', {"business": "Bridge"})|raw}}
 		</div>
 		<div class="header-navigation">
 			{{widget('extendednavigation', 'headernavigationheader', {"align":"left"})|raw}}
