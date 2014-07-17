@@ -1,11 +1,13 @@
 <header class="header-wrap">
 	<div class="header-sub">
 		<div class="container">
-			<div class="header-companyname">
-				{{widget('companyname', 'headercompanyname', {"business": "Bridge"})|raw}}
-			</div>
-			<div class="header-phonenumber">
-				{{widget('profile', 'phonenumber', { 'profileType': 'phone' })|raw}}
+			<div class="row">
+				<div class="span-6 header-companyname">
+					{{widget('companyname', 'companyname', {"business": "BRIDGE TEMPLATE"})|raw}}
+				</div>
+				<div class="span-6 header-phonenumber">
+					{{widget('profile', 'phonenumber', { 'profileType': 'phone', 'align' : 'right' })|raw}}
+				</div>
 			</div>
 		</div>
 	</div>
@@ -14,11 +16,13 @@
 	</div>
 	<div class="header-main">
 		<div class="container">
-			<div class="header-logo">
-				{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
-			</div>
-			<div class="header-navigation">
-				{{widget('extendednavigation', 'headernavigationheader', {"align":"left"})|raw}}
+			<div class="row">
+				<div class="span-2 header-logo">
+					{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+				</div>
+				<div class="span-10 header-navigation">
+					{{widget('extendednavigation', 'headernavigationheader', {"align":"left"})|raw}}
+				</div>
 			</div>
 		</div>
 	</div>

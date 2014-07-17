@@ -18,13 +18,13 @@
 	},
 	"colorSwatches": {
 		"Swatch 1": {
-			"color1":"#ffffff",
-			"color2":"#F00",
-			"color3":"#F00",
-			"color4":"#dddddd",
-			"color5":"#000000",
-			"color6":"#000000",
-			"color7":"#aaaaaa"
+			"color1":"#FAFAFA",
+			"color2":"#FF8233",
+			"color3":"#4A90E2",
+			"color4":"#222222",
+			"color5":"#555555",
+			"color6":"#222222",
+			"color7":"#FFFFFF"
 		},
 		"Swatch 2": {
 			"color1":"#ffffff",
@@ -66,58 +66,58 @@
 	"fontSwatch": {
 	   "title": "Helvetica",
 		"font1": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
-			"font-size": "42px",
+			"font-family": "\"Oswald\", Arial, sans-serif",
+			"font-size": "48px",
 			"font-weight": "400",
-			"line-height": "52px",
-			"color": "@color-swatch4",
-			"letter-spacing": "inherit"
+			"line-height": "58px",
+			"color": "@color-swatch2",
+			"letter-spacing": "1px"
 		},
 		"font2": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
 			"font-size": "24px",
-			"font-weight": "300",
-			"line-height": "34px",
-			"color": "@color-swatch4",
-			"letter-spacing": "inherit"
-		},
-		"font3": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
-			"font-size": "24px",
-			"font-weight": "400",
+			"font-weight": "600",
 			"line-height": "34px",
 			"color": "@color-swatch2",
 			"letter-spacing": "inherit"
 		},
-		"font4": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
-			"font-size": "15px",
+		"font3": {
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+			"font-size": "24px",
 			"font-weight": "600",
-			"line-height": "25px",
+			"line-height": "34px",
 			"color": "@color-swatch4",
 			"letter-spacing": "inherit"
 		},
-		"font5": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
-			"font-size": "14px",
-			"font-weight": "400",
+		"font4": {
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+			"font-size": "15px",
+			"font-weight": "600",
 			"line-height": "25px",
 			"color": "@color-swatch5",
 			"letter-spacing": "inherit"
 		},
-		"font6": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
+		"font5": {
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
 			"font-size": "14px",
 			"font-weight": "400",
-			"line-height": "25px",
+			"line-height": "24px",
+			"color": "@color-swatch5",
+			"letter-spacing": "inherit"
+		},
+		"font6": {
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+			"font-size": "16px",
+			"font-weight": "400",
+			"line-height": "26px",
 			"color": "@color-swatch6",
 			"letter-spacing": "inherit",
 			"color-hover": "lighten(@color-swatch6, 40%)",
-			"background-color": "@color-swatch2",
-			"background-color-hover": "@color-swatch2"
+			"background-color": "@color-swatch7",
+			"background-color-hover": "lighten(@color-swatch7, 10%)"
 		 },
 		"font7": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
 			"font-size": "14px",
 			"font-weight": "400",
 			"line-height": "25px",
@@ -128,7 +128,7 @@
 			"background-color-hover": "@color-swatch3"
 		},
 		"font8": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
 			"font-size": "32px",
 			"font-weight": "700",
 			"line-height": "42px",
@@ -136,7 +136,7 @@
 			"letter-spacing": "inherit"
 		},
 		"font9": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
 			"font-size": "24px",
 			"font-weight": "400",
 			"line-height": "34px",
@@ -144,7 +144,7 @@
 			"letter-spacing": "inherit"
 		},
 		"font10": {
-			"font-family": "\"Helvetica\", Arial, sans-serif",
+			"font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
 			"font-size": "20px",
 			"font-weight": "700",
 			"line-height": "30px",

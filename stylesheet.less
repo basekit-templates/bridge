@@ -60,3 +60,76 @@
 /*	===============================
 	Template Styles
 	=============================== */
+
+
+// 2. Header
+.header-sub,
+.header-main {
+	background-color: @color-swatch7;
+}
+
+.header-sub {
+	box-shadow: 0 1px 1px darken(fadeout(@color-swatch7, 75%), 30%);
+	padding: 6px 0;
+	position: relative;
+	z-index: 1;
+}
+
+.header-phonenumber {
+	text-align: right;
+}
+
+#headerimage {
+	max-height: 200px;
+	overflow: hidden;
+	img {
+		width: 100%;
+	}
+}
+
+.header-main {
+	border-bottom: 3px solid @color-swatch2;
+}
+
+.widget.logo {
+	.logo {
+		display: inline;
+	}
+}
+
+#headerlogo {
+	margin: -29% 0 -33%;
+}
+
+#companyname a,
+#phonenumber {
+	&:extend(h4);
+}
+
+#phonenumber .bk-profile-phone {
+	color: @color-swatch2;
+}
+
+// 3. Navigation
+.widget .extendednavigation ul li {
+	a, &.folder {
+		padding: 18px 30px;
+		&:after {
+			right: 24px;
+			top: 47%;
+		}
+	}
+	&:hover ul {
+		top: 62px;
+		background-color: @color-swatch2;
+		a:hover {
+			background-color: darken(@color-swatch2, 10%);
+		}
+		.text {
+			color: @color-swatch7;
+			&:hover {
+				color: @color-swatch7;
+			}
+		}
+	}
+}
