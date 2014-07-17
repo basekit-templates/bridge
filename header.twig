@@ -1,5 +1,13 @@
-	{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
-
-	{{widget('companyname', 'headercompanyname', {"business": "Bridge"})|raw}}
-
-	{{widget('extendednavigation', 'headernavigationheader', {"align":"left"})|raw}}
+<header class="header-wrap">
+	<div class="container">
+		<div class="header-logo">
+			{{widget('logo', 'headerlogo', {"defaultlogo": asset('images/logo.png')})|raw}}
+		</div>
+		<div class="header-companyname">
+			{{widget('companyname', 'headercompanyname', {"business": "Bridge"})|raw}}
+		</div>
+		<div class="header-navigation">
+			{{widget('extendednavigation', 'headernavigationheader', {"align":"left"})|raw}}
+		</div>
+	</div>
+</header>
