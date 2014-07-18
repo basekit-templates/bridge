@@ -17,13 +17,13 @@
 
 <div class="footer-contact">
 	<div class="footer-contactform">
-		{{widget('contactform', 'thisunqiuewidgetname', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
+		{{widget('contactform', 'contactform', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
 	</div>
 	<div class="footer-map">
-		{{widget('map', 'thisunqiuewidgetname', {'height': '150', 'zoom': '15', 'address': 'profile'})|raw}}
+		{{widget('map', 'mapwidget', {'height': '150', 'zoom': '15', 'address': 'profile'})|raw}}
 	</div>
 	<div class="footer-address">
-		{{widget('companyaddress', 'thisunqiuewidgetname', {})|raw}}
+		{{widget('companyaddress', 'companyaddress', {})|raw}}
 	</div>
 </div>
 

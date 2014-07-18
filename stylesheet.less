@@ -112,15 +112,37 @@
 
 // 3. Navigation
 .widget .extendednavigation ul li {
+	> .text {
+		padding: 0;
+	}
 	a, &.folder {
+		margin-right: 0;
+		> .text:hover, &:hover {
+			background-color: @color-swatch2;
+			color: @color-swatch7;
+		}
 		padding: 18px 30px;
 		&:after {
-			right: 24px;
+			right: 20px;
 			top: 47%;
+		}
+		&:hover:after {
+			border-top-color: @color-swatch7;
+		}
+	}
+	ul a > .text:hover {
+		background-color: darken(@color-swatch2, 10%);
+	}
+	&.folder {
+		padding-right: 40px;
+		&:hover > .text {
+			background-color: @color-swatch2;
+			color: @color-swatch7;
 		}
 	}
 	&:hover ul {
 		top: 62px;
+		left: 0;
 		background-color: @color-swatch2;
 		a:hover {
 			background-color: darken(@color-swatch2, 10%);
@@ -132,4 +154,297 @@
 			}
 		}
 	}
+}
+
+// 8. Forms
+fieldset .btn,
+fieldset button,
+form button {
+	vertical-align: middle;
+}
+
+.form-group {
+	padding-bottom: 10px;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select,
+input,
+input[type=email],
+input[type=text],
+input[type=search],
+textarea,
+.contactform input,
+.contactform textarea,
+.widget.profile form fieldset input {
+	text-indent: 0;
+	width: 100%;
+	padding: 8px 15px 10px;
+	border: 2px solid lighten(@color-swatch5, 40%);
+	outline: none;
+	-webkit-transition: border .2s;
+	-moz-transition: border .2s;
+	-ms-transition: border .2s;
+	transition: border .2s;
+	background-color: @color-swatch1;
+	border-radius: 0;
+	&:hover, &:focus {
+		border-color: @color-swatch2;
+	}
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+select {
+	-moz-appearance: none;
+	text-indent: 0.01px;
+	text-overflow: '';
+}
+
+.widget.profile form fieldset input,
+input[type=email],
+input[type=text],
+input[type=search],
+.signupform fieldset input {
+	height: 41px;
+	vertical-align: middle;
+}
+
+.widget.profile form fieldset input,
+.signupform fieldset input,
+.blog-search-input {
+	width: 100%;
+}
+
+textarea {
+	resize: vertical;
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select {
+	&:extend(p);
+	cursor: pointer;
+	-webkit-appearance: none;
+	position: relative;
+	background-image: image('/images/icons/arrow-down.png');
+	background-repeat: no-repeat;
+	background-position: right 12px center;
+	background-position-x: 95%;
+	background-position-y: 53%;
+	margin-bottom: 12px;
+	padding-right: 33px;
+	height: 41px;
+	line-height: 20px;
+}
+
+.svg {
+	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, select {
+		background-image: image('/images/icons/arrow-down.svg');
+	}
+}
+
+input[type="search"]::-webkit-search-decoration {
+	display: none;
+}
+
+.widget.profile form fieldset label,
+.widget.contactform label,
+div.signupform label,
+label {
+	display: inline-block;
+	&:extend(h3);
+}
+
+// 0. Buttons
+button.btn,
+.signupform fieldset button,
+.widget.profile form button,
+.widget.paypalbuynow .widget.button.paypal,
+.widget.ecomcheckout .checkout-order-button,
+.widget.tweet a,
+.widget.dropbox button,
+.blog-search-submit-button {
+	padding: 8px 14px;
+	display: inline-block;
+	cursor: pointer;
+	margin: 0;
+	&:hover {
+		background-color: @font-swatch7-background-color-hover;
+	}
+}
+
+button {
+	outline: none;
+}
+
+.blog-search-submit-button {
+	&:extend(button.btn);
+	border: none;
+}
+
+.widget.paypalbuynow .widget.button.paypal,
+.widget.tweet a,
+.widget.dropbox button {
+	padding-left: 40px;
+}
+
+// 11. Misc
+.page-wrap {
+	padding-top: 70px;
+}
+
+.page-wrap .widget,
+.widget.tweet {
+	width: 100%;
+	clear: both;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+hr.line {
+	background-color: lighten(@color-swatch5, 40%);
+}
+
+// 0. Twitter Widget
+.twitter ul li a,
+.widget.twitter ul li span a {
+	color: @color-swatch3;
+	text-decoration: none;
+}
+
+.widget.twitter ul li > {
+	time, span a, span {
+		font-size: bkscale(@font-swatch5-font-size, 0.8);
+	}
+	.bk-full-name {
+		font-size: @font-swatch5-font-size;
+	}
+	.twitter-profile-pic a {
+		line-height: 0;
+	}
+}
+
+.twitter-profile-pic {
+	line-height: 0;
+	border: 2px solid @color-swatch1;
+	box-shadow: inset 0px 1px 20px 0px fadeout(@color-swatch5, 75%), 0px 1px 2px 0px fadeout(@color-swatch5, 70%);
+	img {
+		position: relative;
+		z-index: -1;
+	}
+}
+
+// 0. Social Icons
+.widget.socialicons span a,
+.widget.profile .bk-profile-socialicons span a,
+footer .widget.profile .bk-profile-socialicons span a {
+	background-size: 28px;
+	background-color: transparent;
+	-webkit-transition: .2s;
+	-moz-transition: .2s;
+	-ms-transition: .2s;
+	transition: .2s;
+	&:hover {
+		background-color: transparent;
+		-webkit-filter: drop-shadow(0 0 1px @color-swatch3);
+	}
+}
+
+.svg {
+	.bk-socialicons-linkedin a {
+		background-image: image('/images/icons/linkedin.svg');
+	}
+	.bk-socialicons-twitter a {
+		background-image: image('/images/icons/twitter.svg');
+	}
+	.bk-socialicons-facebook a {
+		background-image: image('/images/icons/facebook.svg');
+	}
+	.bk-socialicons-rss a {
+		background-image: image('/images/icons/rss.svg');
+	}
+	.bk-socialicons-googleplus a {
+		background-image: image('/images/icons/googleplus.svg');
+	}
+	.bk-socialicons-youtube a {
+		background-image: image('/images/icons/youtube.svg');
+	}
+}
+
+.bk-socialicons-linkedin a {
+	background-image: image('/images/icons/linkedin.png');
+}
+.bk-socialicons-twitter a {
+	background-image: image('/images/icons/twitter.png');
+}
+.bk-socialicons-facebook a {
+	background-image: image('/images/icons/facebook.png');
+}
+.bk-socialicons-rss a {
+	background-image: image('/images/icons/rss.png');
+}
+.bk-socialicons-googleplus a {
+	background-image: image('/images/icons/googleplus.png');
+}
+.bk-socialicons-youtube a {
+	background-image: image('/images/icons/youtube.png');
+}
+
+// 0. Ecommerce
+.productlist-filter {
+	.form-group {
+		width: 25%;
+	}
+}
+
+.widget.ecomproductslist {
+	width: 100%;
+	margin-left: 0;
+}
+
+.widget.ecomproductslist .productlist-filter {
+	margin-left: 0;
+}
+
+.widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
+	padding: 10px;
+	margin: 0;
+	float: left;
+	&:first-child {
+		padding-left: 0;
+	}
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.form-group.productlist-search:before {
+	content: "Search";
+	&:extend(label);
+}
+
+.widget.signupform .form-group,
+.form-group.productlist-search,
+.widget.profile form fieldset,
+.blog-search-form {
+	position: relative;
+	input[type=search],
+	input[type=email],
+	input[type=text] {
+		padding-right: 90px;
+	}
+	button {
+		position: absolute;
+		right: 0;
+		bottom: 10px;
+	}
+}
+
+.widget.profile form fieldset button {
+	bottom: 0;
 }
