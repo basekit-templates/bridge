@@ -187,7 +187,7 @@ textarea,
 	-moz-transition: border .2s;
 	-ms-transition: border .2s;
 	transition: border .2s;
-	background-color: @color-swatch1;
+	background-color: lighten(@color-swatch1, 10%);
 	border-radius: 0;
 	&:hover, &:focus {
 		border-color: @color-swatch2;
@@ -210,7 +210,7 @@ input[type=email],
 input[type=text],
 input[type=search],
 .signupform fieldset input {
-	height: 41px;
+	height: @font-swatch5-font-size + 27;
 	vertical-align: middle;
 }
 
@@ -227,7 +227,12 @@ textarea {
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
 .widget.ecomcheckout .delivery select,
 select {
-	&:extend(p);
+	font-family: @font-swatch5-font-family;
+	font-weight: @font-swatch5-font-weight;
+	color: @font-swatch5-color;
+	line-height: @font-swatch5-line-height;
+	letter-spacing: @font-swatch5-letter-spacing;
+	font-size: @font-swatch5-font-size;
 	cursor: pointer;
 	-webkit-appearance: none;
 	position: relative;
@@ -238,8 +243,7 @@ select {
 	background-position-y: 53%;
 	margin-bottom: 12px;
 	padding-right: 33px;
-	height: 41px;
-	line-height: 20px;
+	height: @font-swatch5-font-size + 27;
 }
 
 .svg {
@@ -300,7 +304,6 @@ button {
 
 .page-wrap .widget,
 .widget.tweet {
-	width: 100%;
 	clear: both;
 	margin-bottom: 20px;
 	padding: 0;
@@ -402,15 +405,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 }
 
-.widget.ecomproductslist {
-	width: 100%;
-	margin-left: 0;
-}
-
-.widget.ecomproductslist .productlist-filter {
-	margin-left: 0;
-}
-
 .widget.ecomproductslist .productlist-filter .productlist-display-form .form-group {
 	padding: 10px;
 	margin: 0;
@@ -425,7 +419,14 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 .form-group.productlist-search:before {
 	content: "Search";
-	&:extend(label);
+	display: inline-block;
+	padding-bottom: .4em;
+	font-family:@font-swatch3-font-family; 
+	font-weight: @font-swatch3-font-weight; 
+	color:@font-swatch3-color; 
+	line-height:@font-swatch3-line-height; 
+	letter-spacing: @font-swatch3-letter-spacing; 
+	font-size: @font-swatch3-font-size;
 }
 
 .widget.signupform .form-group,
@@ -447,4 +448,216 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 .widget.profile form fieldset button {
 	bottom: 0;
+}
+
+/*
+.widget.ecomproductslist {
+	margin-left: -20px;
+}
+*/
+
+/*
+.widget.ecomproductslist .ecom-productslist-product {
+	margin: 0;
+	float: left;
+	width: 23.5%;
+	margin-left: 20px;
+}
+
+.widget.ecomproductslist .productlist-filter {
+	margin-left: 20px;
+}
+
+*/
+
+.widget.ecomproductslist .ecom-productslist-image-wrap {
+	background-color: lighten(@color-swatch1, 10%);
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
+	max-height: 330px;
+	text-align: center;
+	background-color: lighten(@color-swatch1, 10%);
+	img {
+		display: inline-block;
+		max-height: 100%;
+	}
+}
+
+// 0. Slideshow
+.widget.responsiveslideshow .slideshow-widget {
+	.btn-prev, .btn-next {
+		text-indent: 1000px;
+		overflow: hidden;
+		height: 30px;
+		width: 30px;
+		top: 50%;
+		margin-top: -15px;
+		&:before {
+			content: "";
+			display: block;
+			border: 5px solid transparent;
+			position: absolute;
+			top: 10px;
+			left: 11px;
+			width: 0;
+			height: 0;
+		}
+	}
+	.btn-next:before {
+		border-left-color: @font-swatch7-color;
+		left: 13px;
+	}
+	.btn-prev:before {
+		border-right-color: @font-swatch7-color;
+		left: 6px;
+	}
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-prev,
+.widget.responsiveslideshow .slideshow-widget .btn-next,
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+	background-color: fadeout(@font-swatch7-background-color, 30%);
+}
+
+.widget.responsiveslideshow {
+	.slideshow-widget .btn-play, .btn-prev, .btn-next {
+		-webkit-transition: opacity .2s;
+		-moz-transition: opacity .2s;
+		-ms-transition: opacity .2s;
+		transition: opacity .2s;
+		opacity: .25;
+	}
+	&:hover {
+		.slideshow-widget .btn-play, .btn-prev, .btn-next {
+			opacity: .75;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.content-wrapper {
+		background: fadeout(@color-swatch1, 25%);
+		text-shadow: none;
+		.title {
+			font-weight: @font-swatch3-font-weight;
+			&:after {
+				content: ":";
+			}
+		}
+		.title, .description {
+			color: @color-swatch5;
+		}
+		.title {
+			padding-right: 0;
+			padding-left: 6px;
+		}
+		.description {
+			padding-left: 0;
+		}
+	}
+}
+
+.widget.responsiveslideshow .slideshow-widget-controls .dot {
+	border-radius: 100%;
+	border: 1px solid @color-swatch2;
+	background-color: @color-swatch1;
+	box-shadow: inset 0 0 0 3px @color-swatch1;
+	&.selected {
+		border: 1px solid @color-swatch2;
+		background: @color-swatch3;
+	}
+}
+
+.widget.responsiveslideshow:hover span.btn-play,
+.widget.responsiveslideshow .slideshow-widget:hover .btn-play.pause {
+	&:before, &:after {
+		width: 8px;
+		height: 26px;
+		background: @font-swatch7-color;
+		border: 0;
+		top: 27px;
+		left: 28px;
+	}
+	&:after {
+		left: 42px;
+	}
+}
+
+.widget.responsiveslideshow .slideshow-widget .btn-play {
+	text-indent: -99999px;
+	width: 80px;
+	height: 80px;
+	top: 50%;
+	left: 50%;
+	margin-left: -40px;
+	margin-top: -40px;
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 0;
+		height: 0;
+		border: 20px solid transparent;
+		border-left-color: @font-swatch7-color;
+		left: 32px;
+		top: 31%;
+		border-top-width: 15px;
+		border-bottom-width: 15px;
+	}
+	&:hover {
+		&:before, &:after {
+			top: 31%;
+		}
+	}
+}
+
+// 0. Menu
+.menu-item-image-wrap {
+	background-size: cover;
+	height: 270px;
+	background-position: center;
+	border: 2px solid lighten(@color-swatch5, 40%);
+	img {
+		display: none;
+	}
+}
+
+.menu .menu-subsection {
+	padding: 0;
+}
+
+.menu-subsection-wrapper {
+	border: 2px solid lighten(@color-swatch5, 60%);
+	padding: 4%;
+}
+
+.menu-subsection-promoted {
+	border: 2px solid lighten(@color-swatch5, 40%);
+	background: lighten(@color-swatch1, 10%);
+}
+
+.menu-section-item-dietary-props {
+	color: lighten(@font-swatch5-color, 30%);
+}
+
+.standard-price {
+	font-family:@font-swatch3-font-family; 
+	font-weight: @font-swatch3-font-weight; 
+	color:@font-swatch3-color; 
+	line-height:@font-swatch3-line-height; 
+	letter-spacing: @font-swatch3-letter-spacing; 
+	font-size: @font-swatch3-font-size;
+}
+
+// 0. Blog
+.blog-post-item.has-image {
+	position: relative;
+}
+.blog-post-feature-image-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
 }
