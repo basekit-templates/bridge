@@ -272,7 +272,8 @@ button.btn,
 .widget.ecomcheckout .checkout-order-button,
 .widget.tweet a,
 .widget.dropbox button,
-.blog-search-submit-button {
+.blog-search-submit-button,
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link {
 	padding: 8px 14px;
 	display: inline-block;
 	cursor: pointer;
@@ -469,6 +470,31 @@ footer .widget.profile .bk-profile-socialicons span a {
 }
 
 */
+
+.widget.ecombasket .ecombasket-list-container ul li {
+	border-bottom: 1px solid lighten(@font-swatch5-color, 50%);
+}
+
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
+	color: @color-swatch2;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.ecom-productslist-product {
+	a:hover {
+		text-decoration: none;
+		.ecom-productslist-title {
+			text-decoration: underline;
+		}
+	}
+}
+
+.ecom-productslist-image-wrap {
+	margin-bottom: 10px;
+}
 
 .widget.ecomproductslist .ecom-productslist-image-wrap {
 	background-color: lighten(@color-swatch1, 10%);
