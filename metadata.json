@@ -3,11 +3,8 @@
 	"thumbnail":"thumbnail.png",
 	"screenshot":"thumbnail.png",
 	"images":[
-		"images/feature.jpg",
-		"images/logo.jpg",
-		"images/icon-1.jpg",
-		"images/icon-2.jpg",
-		"images/icon-3.jpg"
+		"images/header-image.jpg",
+		"images/logo.png"
 	],
 	"pageTypes":[
 		"home",

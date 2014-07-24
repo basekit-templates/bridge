@@ -19,16 +19,16 @@
 	<div class="container">
 		<div class="row">
 			<div class="footer-contactform span-6">
-				{{widget('content', 'contactformcontent', {content: '<h2>LOREM IPSUM</h2>', lines: 'all'})|raw}}
+				{{widget('content', 'contactformtitle', {content: '<h2>LOREM IPSUM</h2>', lines: 'all'})|raw}}
 				{{widget('contactform', 'contactform', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
 			</div>
 			<div class="footer-map span-6">
-				{{widget('content', 'contactformcontent', {content: '<h2>LOREM IPSUM</h2>', lines: 'all'})|raw}}
-				{{widget('content', 'contactformcontent', {content: '<h3>Lorem</h3>', lines: 'all'})|raw}}
+				{{widget('content', 'maptitle', {content: '<h2>LOREM IPSUM</h2>', lines: 'all'})|raw}}
+				{{widget('content', 'mapsubtitle', {content: '<h3>Lorem</h3>', lines: 'all'})|raw}}
 				{{widget('map', 'mapwidget', {'height': '210', 'zoom': '15', 'address': 'profile'})|raw}}
 			</div>
 			<div class="footer-address span-6">
-				{{widget('content', 'contactformcontent', {content: '<h3>Lorem</h3>', lines: 'all'})|raw}}
+				{{widget('content', 'addresstitle', {content: '<h3>Lorem</h3>', lines: 'all'})|raw}}
 				{{widget('companyaddress', 'companyaddress', {})|raw}}
 			</div>
 		</div>

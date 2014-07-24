@@ -103,7 +103,12 @@
 
 #companyname a,
 #phonenumber {
-	&:extend(h4);
+	font-family: @font-swatch4-font-family;
+	font-weight: @font-swatch4-font-weight;
+	color: @font-swatch4-color;
+	line-height: @font-swatch4-line-height;
+	letter-spacing: @font-swatch4-letter-spacing;
+	font-size: @font-swatch4-font-size;
 }
 
 #phonenumber .bk-profile-phone {
@@ -262,7 +267,12 @@ input[type="search"]::-webkit-search-decoration {
 div.signupform label,
 label {
 	display: inline-block;
-	&:extend(h3);
+	font-family: @font-swatch3-font-family;
+	font-weight: @font-swatch3-font-weight;
+	color: @font-swatch3-color;
+	line-height: @font-swatch3-line-height;
+	letter-spacing: @font-swatch3-letter-spacing;
+	font-size: @font-swatch3-font-size;
 }
 
 // 0. Buttons
@@ -274,7 +284,15 @@ button.btn,
 .widget.tweet a,
 .widget.dropbox button,
 .blog-search-submit-button,
-.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link {
+.widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.blog-search-submit-button {
+	background-color: @font-swatch7-background-color;
+	font-family: @font-swatch7-font-family;
+	font-size: @font-swatch7-font-size;
+	font-weight:  @font-swatch7-font-weight;
+	line-height:@font-swatch7-line-height;
+	color: @font-swatch7-color;
+	letter-spacing: @font-swatch7-letter-spacing;
 	padding: 8px 14px;
 	display: inline-block;
 	cursor: pointer;
@@ -289,7 +307,6 @@ button {
 }
 
 .blog-search-submit-button {
-	&:extend(button.btn);
 	border: none;
 }
 
