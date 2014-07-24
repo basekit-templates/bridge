@@ -222,6 +222,7 @@ input[type=search],
 
 textarea {
 	resize: vertical;
+	min-height: 120px;
 }
 
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
@@ -344,18 +345,22 @@ hr.line {
 }
 
 // 0. Social Icons
-.widget.socialicons span a,
-.widget.profile .bk-profile-socialicons span a,
-footer .widget.profile .bk-profile-socialicons span a {
-	background-size: 28px;
-	background-color: transparent;
-	-webkit-transition: .2s;
-	-moz-transition: .2s;
-	-ms-transition: .2s;
-	transition: .2s;
-	&:hover {
+.widget.socialicons,
+.widget.profile .bk-profile-socialicons,
+footer .widget.profile .bk-profile-socialicons {
+	margin: 10px 0;
+	span a {
+		background-size: 24px;
+		margin-bottom: 0;
 		background-color: transparent;
-		-webkit-filter: drop-shadow(0 0 1px @color-swatch3);
+		-webkit-transition: .2s;
+		-moz-transition: .2s;
+		-ms-transition: .2s;
+		transition: .2s;
+		&:hover {
+			background-color: transparent;
+			-webkit-filter: drop-shadow(0 0 1px @color-swatch3);
+		}
 	}
 }
 
@@ -686,4 +691,33 @@ footer .widget.profile .bk-profile-socialicons span a {
 	left: 0;
 	width: 50%;
 	height: 100%;
+}
+
+// 0. Homepage Footer
+.footer-contact {
+	float: left;
+	width: 100%;
+	background-color: @color-swatch4;
+	padding: 40px 0;
+	.widget.content {
+		margin-bottom: 0;
+	}
+	.contactform fieldset {
+		margin: 0;
+	}
+	h2, h3, h4, h5, h6, p, label, span,
+	.widget.contactform label {
+		color: @color-swatch1;
+	}
+}
+
+.footer-copyright {
+	text-align: right;
+	margin-top: 15px;
+}
+
+.footer-socialicons .widget.content {
+	float: left;
+	margin-right: 6px;
+	margin-top: 15px;
 }

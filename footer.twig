@@ -1,10 +1,13 @@
 <footer class="footer-wrap">
 	<div class="container">
-		<div class="footer-copyright">
-			{{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'profile', 'align' : 'left'})|raw}}
-		</div>
-		<div class="foorer-socialicons">
-			{{widget('profile', 'socialicons', { 'profileType' : 'socialicons', 'align' : 'left' })|raw}}
+		<div class="row">
+			<div class="span-6 footer-socialicons">
+				{{widget('content', 'contactformcontent', {content: '<p>Lorem Ipsum:</p>', lines: 'all'})|raw}}
+				{{widget('profile', 'socialicons', { 'profileType' : 'socialicons', 'align' : 'left' })|raw}}
+			</div>
+			<div class="span-6 footer-copyright">
+				{{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'profile', 'align' : 'left'})|raw}}
+			</div>
 		</div>
 	</div>
 </footer>

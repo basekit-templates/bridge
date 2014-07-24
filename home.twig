@@ -9,21 +9,29 @@
 	<main class="main-content">
 	
 		<!-- Zone widget area -->
-		{{zone('main')|raw}}
+		
 		
 	</main>
 	
 </div>
 
 <div class="footer-contact">
-	<div class="footer-contactform">
-		{{widget('contactform', 'contactform', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
-	</div>
-	<div class="footer-map">
-		{{widget('map', 'mapwidget', {'height': '150', 'zoom': '15', 'address': 'profile'})|raw}}
-	</div>
-	<div class="footer-address">
-		{{widget('companyaddress', 'companyaddress', {})|raw}}
+	<div class="container">
+		<div class="row">
+			<div class="footer-contactform span-6">
+				{{widget('content', 'contactformcontent', {content: '<h2>LOREM IPSUM</h2>', lines: 'all'})|raw}}
+				{{widget('contactform', 'contactform', {'text': 'Submit','formTitle': 'Contact Form', 'email': 'profile'})|raw}}
+			</div>
+			<div class="footer-map span-6">
+				{{widget('content', 'contactformcontent', {content: '<h2>LOREM IPSUM</h2>', lines: 'all'})|raw}}
+				{{widget('content', 'contactformcontent', {content: '<h3>Lorem</h3>', lines: 'all'})|raw}}
+				{{widget('map', 'mapwidget', {'height': '210', 'zoom': '15', 'address': 'profile'})|raw}}
+			</div>
+			<div class="footer-address span-6">
+				{{widget('content', 'contactformcontent', {content: '<h3>Lorem</h3>', lines: 'all'})|raw}}
+				{{widget('companyaddress', 'companyaddress', {})|raw}}
+			</div>
+		</div>
 	</div>
 </div>
 
