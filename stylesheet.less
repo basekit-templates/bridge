@@ -188,6 +188,7 @@ textarea,
 	padding: 8px 15px 10px;
 	border: 2px solid lighten(@color-swatch5, 40%);
 	outline: none;
+	-webkit-appearance: none;
 	-webkit-transition: border .2s;
 	-moz-transition: border .2s;
 	-ms-transition: border .2s;
@@ -240,9 +241,9 @@ select {
 	letter-spacing: @font-swatch5-letter-spacing;
 	font-size: @font-swatch5-font-size;
 	cursor: pointer;
-	-webkit-appearance: none;
+	-webkit-appearance: menulist;
 	position: relative;
-	background-image: image('/images/icons/arrow-down.png');
+/* 	background-image: image('/images/icons/arrow-down.png'); */
 	background-repeat: no-repeat;
 	background-position: right 12px center;
 	background-position-x: 95%;
@@ -254,7 +255,7 @@ select {
 
 .svg {
 	.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select, select {
-		background-image: image('/images/icons/arrow-down.svg');
+/* 		background-image: image('/images/icons/arrow-down.svg'); */
 	}
 }
 
@@ -285,7 +286,9 @@ button.btn,
 .widget.dropbox button,
 .blog-search-submit-button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
-.blog-search-submit-button {
+.blog-search-submit-button,
+.ecombasket-summary-link,
+.basket-summary-empty-cta {
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
@@ -298,7 +301,22 @@ button.btn,
 	cursor: pointer;
 	margin: 0;
 	&:hover {
+		text-decoration: none;
 		background-color: @font-swatch7-background-color-hover;
+	}
+}
+
+.basket-summary-empty-cta,
+.ecombasket-summary-link {
+	display: inline-block;
+}
+
+.widget.ecomcheckout .checkout-order-button:disabled,
+button:disabled {
+	background-color: fadeout(@font-swatch7-background-color, 50%);
+	cursor: not-allowed;
+	&:hover {
+		background-color: fadeout(@font-swatch7-background-color, 50%);
 	}
 }
 
@@ -440,18 +458,6 @@ footer .widget.profile .bk-profile-socialicons {
 	}
 }
 
-.form-group.productlist-search:before {
-	content: "Search";
-	display: inline-block;
-	padding-bottom: .4em;
-	font-family:@font-swatch3-font-family; 
-	font-weight: @font-swatch3-font-weight; 
-	color:@font-swatch3-color; 
-	line-height:@font-swatch3-line-height; 
-	letter-spacing: @font-swatch3-letter-spacing; 
-	font-size: @font-swatch3-font-size;
-}
-
 .widget.signupform .form-group,
 .form-group.productlist-search,
 .widget.profile form fieldset,
@@ -510,6 +516,55 @@ footer .widget.profile .bk-profile-socialicons {
 		display: inline-block;
 		max-height: 100%;
 	}
+}
+
+// Basket Summary
+.basket-summary-items-table {
+	border-collapse: collapse;
+	width: 100%;
+	.image-wrap {
+		background-position: 10000px;
+		line-height: 0;
+		text-align: center;
+		padding: 30px;
+		img {
+			max-width: 100%;
+			max-height: 200px;
+		}
+	}
+	td {
+		padding: 10px 0;
+	}
+	tr {
+		border-bottom: solid 1px darken(@color-swatch1, 10%);
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+	.basket-summary-subtotal {
+		padding: 20px;
+	}
+}
+
+.basket-summary-amount,
+.basket-summary-subtotal {
+	text-align: center;
+}
+
+.basket-summary-quantitybtn {
+	.btn {
+		width: 40px;
+	}
+}
+
+.basket-summary-items-column {
+	width: 30%;
+}
+
+.quantity-number {
+	display: inline-block;
+	min-width: 40px;
+	text-align: center;
 }
 
 // 0. Slideshow
@@ -697,6 +752,7 @@ footer .widget.profile .bk-profile-socialicons {
 }
 
 .blog-post-feature-image-wrap {
+	font-size: 0;
 	float: right;
 	width: 50%;
 	height: 100%;
@@ -829,5 +885,43 @@ footer .widget.profile .bk-profile-socialicons {
 		select, label {
 			width: 100%;
 		}
+	}
+	.basket-summary-items-table {
+		td, .basket-summary-subtotal {
+			padding: 10px;
+		}
+		.image-wrap {
+			padding: 0;
+		}
+	}
+	.basket-summary-items-table {
+		td, th {
+			float: left;
+			width: 100%;
+			padding: 0 0 5px;
+		}
+	}
+	.basket-summary-items-table .image-wrap {
+		padding-top: 5px;
+	}
+	.basket-summary-amount-column,
+	.basket-summary-details-column {
+		display: none;
+	}
+	.basket-summary-items-column {
+		text-align: left;
+	}
+	.basket-summary-amount {
+		text-align: right;
+	}
+	.basket-summary-subtotal {
+		padding: 0 0 10px;
+		text-align: left;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+	select:focus, textarea:focus, input:focus {
+		font-size: 16px;
 	}
 }
