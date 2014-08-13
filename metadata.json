@@ -1,15 +1,14 @@
 {
 	"name":"Bridge",
-	"thumbnail":"thumbnail.png",
-	"screenshot":"thumbnail.png",
+	"thumbnail":"bridge.png",
 	"images":[
 		"images/header-image.jpg",
 		"images/logo.png"
 	],
 	"pageTypes":[
 		"home",
-		"default"
 	],
+	"templateType":"standard",
 	"tags": {
 		"en": ["construction", "textured", "business", "formal", "website", "industrial", "sectioned", "bold", "sans-serif"]
 	},
