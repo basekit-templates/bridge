@@ -5,9 +5,7 @@
 		"images/header-image.jpg",
 		"images/logo.png"
 	],
-	"pageTypes":[
-		"home",
-	],
+	"pageTypes":["home"],
 	"templateType":"standard",
 	"tags": {
 		"en": ["construction", "textured", "business", "formal", "website", "industrial", "sectioned", "bold", "sans-serif"]
