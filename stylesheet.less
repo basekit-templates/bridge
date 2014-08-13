@@ -783,7 +783,7 @@ footer .widget.profile .bk-profile-socialicons {
 	background-color: darken(@color-swatch1, 5%);
 }
 
-// 0. Homepage Footer
+// 0. Footer
 .footer-contact {
 	float: left;
 	width: 100%;
@@ -799,6 +799,10 @@ footer .widget.profile .bk-profile-socialicons {
 	.widget.contactform label {
 		color: @color-swatch1;
 	}
+}
+
+.footer-wrap {
+	background-color: lighten(@color-swatch1, 10%);
 }
 
 .footer-copyright {
@@ -920,7 +924,11 @@ footer .widget.profile .bk-profile-socialicons {
 	}
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
 	select:focus, textarea:focus, input:focus {
 		font-size: 16px;
 	}
