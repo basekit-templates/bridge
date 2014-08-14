@@ -65,7 +65,7 @@
 // 2. Header
 .header-sub,
 .header-main {
-	background-color: @color-swatch7;
+	background-color: lighten(@color-swatch1, 20%);
 }
 
 .header-sub {
@@ -79,7 +79,7 @@
 	text-align: right;
 }
 
-#headerimage {
+.header-image .widget.image {
 	max-height: 200px;
 	overflow: hidden;
 	img {
@@ -97,22 +97,28 @@
 	}
 }
 
-#headerlogo {
+.header-logo .widget.logo {
 	margin: -29% 0 -33%;
 }
 
-#companyname a,
-#phonenumber {
-	font-family: @font-swatch4-font-family;
-	font-weight: @font-swatch4-font-weight;
-	color: @font-swatch4-color;
-	line-height: @font-swatch4-line-height;
-	letter-spacing: @font-swatch4-letter-spacing;
-	font-size: @font-swatch4-font-size;
+.header-sub {
+	.widget.companyname a,
+	.widget.profile {
+		font-family: @font-swatch4-font-family;
+		font-weight: @font-swatch4-font-weight;
+		color: @font-swatch4-color;
+		line-height: @font-swatch4-line-height;
+		letter-spacing: @font-swatch4-letter-spacing;
+		font-size: @font-swatch4-font-size;
+	}
 }
 
-#phonenumber .bk-profile-phone {
+.header-sub {
 	color: @color-swatch2;
+}
+
+.header-navigation {
+	min-height: 40px;
 }
 
 // 3. Navigation
@@ -159,6 +165,10 @@
 			}
 		}
 	}
+}
+
+.widget .extendednavigation ul .selected a {
+	color: @color-swatch3;
 }
 
 // 8. Forms
@@ -286,9 +296,11 @@ button.btn,
 .widget.dropbox button,
 .blog-search-submit-button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button,
 .blog-search-submit-button,
 .ecombasket-summary-link,
-.basket-summary-empty-cta {
+.basket-summary-empty-cta,
+.ecombasket-remove-button {
 	background-color: @font-swatch7-background-color;
 	font-family: @font-swatch7-font-family;
 	font-size: @font-swatch7-font-size;
@@ -300,6 +312,8 @@ button.btn,
 	display: inline-block;
 	cursor: pointer;
 	margin: 0;
+	border: none;
+	text-decoration: none;
 	&:hover {
 		text-decoration: none;
 		background-color: @font-swatch7-background-color-hover;
@@ -367,6 +381,20 @@ hr.line {
 	.twitter-profile-pic a {
 		line-height: 0;
 	}
+}
+
+.widget.twitter .twitter-profile-pic {
+	float: left;
+	margin-right: 0;
+	width: 100px;
+}
+
+.widget.twitter .twitter-content {
+	float: left;
+	padding: 5px 20px;
+	width: 100%;
+	margin-left: -100px;
+	padding-left: 120px;
 }
 
 .twitter-profile-pic {
@@ -483,14 +511,6 @@ footer .widget.profile .bk-profile-socialicons {
 	border-bottom: 1px solid lighten(@font-swatch5-color, 50%);
 }
 
-.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
-	color: @color-swatch2;
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
 .ecom-productslist-product {
 	a:hover {
 		text-decoration: none;
@@ -516,6 +536,10 @@ footer .widget.profile .bk-profile-socialicons {
 		display: inline-block;
 		max-height: 100%;
 	}
+}
+
+.ecom-product-info {
+	padding-bottom: 20px;
 }
 
 // Basket Summary
@@ -559,6 +583,31 @@ footer .widget.profile .bk-profile-socialicons {
 
 .basket-summary-items-column {
 	width: 30%;
+}
+
+.basket-summary-product-info {
+	font-family: @font-swatch3-font-family;
+	font-size: @font-swatch3-font-size;
+	font-weight: @font-swatch3-font-weight;
+	color: @font-swatch3-color;
+	line-height: @font-swatch3-line-height;
+	letter-spacing: @font-swatch3-letter-spacing;
+}
+
+.basket-summary-quantity-text {
+	font-family: @font-swatch5-font-family;
+	font-size: @font-swatch5-font-size;
+	font-weight: @font-swatch5-font-weight;
+	line-height: @font-swatch5-line-height;
+	color: @font-swatch5-color;
+	letter-spacing: @font-swatch5-letter-spacing;
+	padding-bottom: 5px;
+}
+
+.basket-summary-legal-links {
+	display: inline-block;
+	width: 100%;
+	padding: 20px;
 }
 
 .quantity-number {
@@ -707,7 +756,14 @@ footer .widget.profile .bk-profile-socialicons {
 }
 
 .menu .menu-subsection {
-	padding: 0;
+	margin: 0;
+	padding: 0 0 15px;
+}
+
+.widget.menu {
+	> .main {
+		padding-bottom: 20px;
+	}
 }
 
 .menu-subsection-wrapper {
@@ -720,7 +776,8 @@ footer .widget.profile .bk-profile-socialicons {
 	background: lighten(@color-swatch1, 10%);
 }
 
-.menu-section-item-dietary-props {
+.menu-section-item-dietary-props,
+.menu-item-nutritional-title {
 	color: lighten(@font-swatch5-color, 30%);
 }
 
@@ -783,6 +840,18 @@ footer .widget.profile .bk-profile-socialicons {
 	background-color: darken(@color-swatch1, 5%);
 }
 
+.blog-post-date {
+	color: fadeout(@color-swatch3, 25%);
+}
+
+.blog-post-publish-date {
+	color: fadeout(@color-swatch5, 25%);
+}
+
+time {
+	font-size: 1em;
+}
+
 // 0. Footer
 .footer-contact {
 	float: left;
@@ -803,6 +872,7 @@ footer .widget.profile .bk-profile-socialicons {
 
 .footer-wrap {
 	background-color: lighten(@color-swatch1, 10%);
+	clear: both;
 }
 
 .footer-copyright {
@@ -810,10 +880,15 @@ footer .widget.profile .bk-profile-socialicons {
 	margin-top: 15px;
 }
 
-.footer-socialicons .widget.content {
-	float: left;
-	margin-right: 6px;
-	margin-top: 15px;
+.footer-socialicons {
+	.widget.profile {
+		display: inline-block;
+	}
+	.widget.content {
+		float: left;
+		margin-right: 6px;
+		margin-top: 15px;
+	}
 }
 
 @media @tablet {
@@ -823,7 +898,7 @@ footer .widget.profile .bk-profile-socialicons {
 			float: left;
 		}
 	}
-	#headerlogo {
+	.widget.logo .logo {
 		display: none;
 	}
 	.widget .extendednavigation a.pull:after {
