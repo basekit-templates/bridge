@@ -426,6 +426,7 @@ hr.line {
 .widget.profile .bk-profile-socialicons,
 .footer-wrap .widget.profile .bk-profile-socialicons {
 	margin: 0;
+	line-height: 0;
 	span a {
 		background-size: 24px;
 		margin-bottom: 0;
@@ -434,6 +435,8 @@ hr.line {
 		-moz-transition: .2s;
 		-ms-transition: .2s;
 		transition: .2s;
+		width: 24px;
+		height: 24px;
 		&:hover {
 			background-color: transparent;
 			-webkit-filter: drop-shadow(0 0 1px @color-swatch3);
@@ -900,7 +903,7 @@ time {
 
 .footer-socialicons {
 	> div {
-		vertical-align: middle;
+		vertical-align: text-top;
 		display: inline-block;
 		padding: 10px 0;
 		> span {
