@@ -525,6 +525,13 @@ hr.line {
 	}
 }
 
+button::-moz-focus-inner { 
+	border: 0; 
+	padding: 0; 
+	margin-top: 0px; 
+	margin-bottom: 0px; 
+}
+
 .widget.profile form fieldset button {
 	bottom: 10px;
 }
@@ -919,6 +926,7 @@ time {
 		margin-left: 0;
 	}
 	.header-sub {
+		min-height: auto;
 		.span-6 {
 			width: 50%;
 			float: left;
@@ -942,8 +950,11 @@ time {
 	.widget .extendednavigation a.pull {
 		top: 12px;
 	}
-	.page-wrap {
-		padding: 20px 10px 0;
+	.main-content,
+	.footer-contact,
+	.header-sub,
+	.header-main {
+		padding: 5px 10px 0;
 	}
 	.footer-wrap {
 		padding-bottom: 20px;
