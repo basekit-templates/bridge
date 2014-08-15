@@ -61,6 +61,10 @@
 	Template Styles
 	=============================== */
 
+// 0. Typography
+p {
+	padding-bottom: 6px;
+}
 
 // 2. Header
 .header-sub,
@@ -420,8 +424,8 @@ hr.line {
 // 0. Social Icons
 .widget.socialicons,
 .widget.profile .bk-profile-socialicons,
-footer .widget.profile .bk-profile-socialicons {
-	margin: 10px 0;
+.footer-wrap .widget.profile .bk-profile-socialicons {
+	margin: 0;
 	span a {
 		background-size: 24px;
 		margin-bottom: 0;
@@ -891,18 +895,18 @@ time {
 
 .footer-copyright {
 	text-align: right;
-	margin-top: 15px;
+	padding: 10px 0;
 }
 
 .footer-socialicons {
 	> div {
-		display: inline-block;
 		vertical-align: middle;
-	}
-	.widget.content {
-		float: left;
-		margin-right: 6px;
-		margin-top: 15px;
+		display: inline-block;
+		padding: 10px 0;
+		> span {
+			padding-bottom: 6px;
+			display: inline-block;
+		}
 	}
 }
 
